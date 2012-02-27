@@ -3,9 +3,22 @@ snippet each
 	_.each(${1:Things}, function(val${2:, key}) {
 		${4}
 	}${3:, this});
+# Require.js Methods
+snippet def
+	define([
+		${1:// dependencies...}
+	], function(${2}) {
+		${3:// body...}
+	});
 # Prototype
 snippet proto
 	${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {
+		${4:// body...}
+	};
+# Superclass
+snippet super
+	${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {
+		$1.superclass.$2.apply(this, arguments);
 		${4:// body...}
 	};
 # Function
